@@ -12,8 +12,21 @@ div.wrapper {
 header {
     background-color: #858585;
     min-height: 2rem;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+img.nectarLogo {
+    margin-left: 1rem;
+    margin: 0.5rem
+}
+
+
+.icons {
+    margin-right: 1.5rem;
+    display: flex;
+    gap: 2.5rem;
 }
 
 main {
