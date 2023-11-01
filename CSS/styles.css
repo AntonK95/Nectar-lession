@@ -12,8 +12,8 @@ div.wrapper {
 header {
     background-color: #858585;
     min-height: 2rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+
 }
 
 main {
@@ -22,4 +22,34 @@ main {
     background-color: hotpink;
     min-width: 100px;
     align-self: center;
+}
+
+.recipeCardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-template-areas: "greenItem greenItem greenItem"
+    "purpleItem redItem blueItem"; /* här kopplar vi in det vi har namngett nedan. I denna area är det 3 items per rad, vid varje upprepning av namn (greenItem) tar det namnivna item upp en fraction, item x upprepning = antal fractions */
+}
+
+.recipeCard {
+    min-height: 6rem;
+    min-width: 6rem;
+}
+
+.greenBg {
+    background-color: green;
+    grid-area: greenItem; /* här namnger vi detta item till greenItem i grid-area */
+}
+.purpleBg {
+    background-color: rebeccapurple;
+    grid-area: purpleItem;
+}
+.redBg {
+    background-color: red;
+    grid-area: redItem;
+}
+.blueBg {
+    background-color: blue;
+    grid-area: blueItem;
 }
