@@ -15,6 +15,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
+}
+nav.clickableItems {
+    display: flex;
+    gap: 1rem;
 }
 
 img.nectarLogo {
@@ -65,4 +70,66 @@ main {
 .blueBg {
     background-color: blue;
     grid-area: blueItem;
+}
+
+article.product {
+    display: flex;
+    flex-direction: row;
+    max-width: 1024px;
+    height: 512px;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+/* bild-sidan av komponenten */
+figure.product-image {
+    margin: 0;
+    padding: 2rem;
+    flex: 3;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+figure.product-image img {
+    width: 100%;
+    flex: 1;
+}
+
+/* vita fyrkanten till höger med infotext */
+aside.product-info {
+    flex: 1;
+    min-width: 20rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+aside.product-info h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0 0 0;
+}
+aside.product-info h2 {
+    margin: 0;
+    font-weight: 500;
+}
+
+aside.product-info button {
+    appearance: none;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    border: 2px solid black;
+    padding: 0.75rem 1rem;
+    color: black;
+    align-self: flex-end;
+    margin-top: auto;
+    transition: all 0.3s;
+}
+
+aside.product-info button:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
 }
