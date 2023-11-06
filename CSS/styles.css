@@ -51,7 +51,7 @@ main {
     justify-content: center;
 }
 
-.chapterHeading {
+article.chapterHeading {
     display: flex;
     display: inline-flex;
     padding: 1.75rem 0rem;
@@ -154,7 +154,7 @@ figure.product-image {
 
 .responsiv-image {
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 /* vita fyrkanten till höger med infotext */
@@ -166,7 +166,33 @@ aside.product-info {
     flex-direction: column;
 }
 
-.hero-title {
+.rating {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.product-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.like-heart {
+    display: flex;
+    align-self: flex-end;
+}
+
+.settings-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.ellipse1 .ellipse2 .ellipse3 {
+    height: 0.2rem;
+    width: 0.2rem;
+}
+
+aside.hero-title h2 {
     color: #222;
     font-family: EB Garamond;
     font-size: 0.875rem;
@@ -193,10 +219,6 @@ aside.product-info {
     font-weight: 400;
 }
 
-aside.product-info h2 {
-    margin: 0;
-    font-weight: 500;
-}
 
 aside.product-info button {
     height: 3.5rem;
