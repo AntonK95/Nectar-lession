@@ -6,17 +6,24 @@ body {
 div.wrapper {
     display: flex;
     flex-direction: column;
-
+    background-color: #DADEE3;
+    justify-content: center;
 }
 
 header {
-    background-color: #858585;
+    background-color: #DADEE3;
     min-height: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    border-bottom: #9c9fa3;
 }
+
+.clickableItems a {
+    color: black;
+    /* Set the color to black, or any color you prefer */
+}
+
 nav.clickableItems {
     display: flex;
     gap: 1rem;
@@ -35,11 +42,61 @@ img.nectarLogo {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     max-width: 1000px;
     min-height: 2rem;
-    background-color: hotpink;
     min-width: 100px;
     align-self: center;
+    justify-content: center;
+}
+
+.chapterHeading {
+    display: flex;
+    display: inline-flex;
+    padding: 1.75rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chapter {
+    color: #222;
+    text-align: center;
+    font-family: EB Garamond;
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.tasteful {
+    color: #222;
+    text-align: center;
+    font-family: EB Garamond;
+    font-size: 2.625rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.recipes {
+    color: #222;
+    font-family: Open Sans;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.byChef {
+    color: #222;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .recipeCardContainer {
@@ -47,7 +104,8 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     grid-template-areas: "greenItem greenItem greenItem"
-    "purpleItem redItem blueItem"; /* här kopplar vi in det vi har namngett nedan. I denna area är det 3 items per rad, vid varje upprepning av namn (greenItem) tar det namnivna item upp en fraction, item x upprepning = antal fractions */
+        "purpleItem redItem blueItem";
+    /* här kopplar vi in det vi har namngett nedan. I denna area är det 3 items per rad, vid varje upprepning av namn (greenItem) tar det namnivna item upp en fraction, item x upprepning = antal fractions */
 }
 
 .recipeCard {
@@ -56,17 +114,21 @@ main {
 }
 
 .greenBg {
-    background-color: green;
-    grid-area: greenItem; /* här namnger vi detta item till greenItem i grid-area */
+    background-color: rgb(237, 238, 237);
+    grid-area: greenItem;
+    /* här namnger vi detta item till greenItem i grid-area */
 }
+
 .purpleBg {
     background-color: rebeccapurple;
     grid-area: purpleItem;
 }
+
 .redBg {
     background-color: red;
     grid-area: redItem;
 }
+
 .blueBg {
     background-color: blue;
     grid-area: blueItem;
@@ -76,15 +138,12 @@ article.product {
     display: flex;
     flex-direction: row;
     max-width: 1024px;
-    height: 512px;
     flex-wrap: wrap;
-    margin: 2rem;
 }
 
 /* bild-sidan av komponenten */
 figure.product-image {
     margin: 0;
-    padding: 2rem;
     flex: 3;
     min-width: 20rem;
     display: flex;
@@ -92,9 +151,10 @@ figure.product-image {
     justify-content: center;
     align-items: center;
 }
-figure.product-image img {
-    width: 100%;
-    flex: 1;
+
+.responsiv-image {
+    max-width: 100%;
+    height: auto;
 }
 
 /* vita fyrkanten till höger med infotext */
@@ -106,30 +166,52 @@ aside.product-info {
     flex-direction: column;
 }
 
-aside.product-info h1 {
-    font-size: 2.5rem;
-    margin: 2rem 0 0 0;
+.hero-title {
+    color: #222;
+    font-family: EB Garamond;
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
 }
+
+.hero-description {
+    color: #222;
+    font-family: Open Sans;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.0375rem;
+}
+
+.loremIpsum {
+    color: #222;
+    font-family: Open Sans;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
 aside.product-info h2 {
     margin: 0;
     font-weight: 500;
 }
 
 aside.product-info button {
+    height: 3.5rem;
+    background-color: rgba(255, 227, 80, 1);
     appearance: none;
     border: none;
-    background: none;
-    font-size: 1rem;
-    border: 2px solid black;
+    border-radius: 2rem;
     padding: 0.75rem 1rem;
-    color: black;
     align-self: flex-end;
     margin-top: auto;
     transition: all 0.3s;
 }
 
 aside.product-info button:hover {
-    background: black;
+    background: #DADEE3;
     color: white;
     cursor: pointer;
 }
