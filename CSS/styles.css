@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: #9c9fa3;
+    border-bottom: solid 0.1rem rgba(128, 128, 128, 0.326);
 }
 
 .clickableItems a {
@@ -120,17 +120,17 @@ article.chapterHeading {
 }
 
 .purpleBg {
-    background-color: rebeccapurple;
+    background-color: rgb(237, 238, 237);
     grid-area: purpleItem;
 }
 
 .redBg {
-    background-color: red;
+    background-color: rgb(237, 238, 237);
     grid-area: redItem;
 }
 
 .blueBg {
-    background-color: blue;
+    background-color: rgb(255, 227, 80, 1);
     grid-area: blueItem;
 }
 
@@ -236,4 +236,58 @@ aside.product-info button:hover {
     background: #DADEE3;
     color: white;
     cursor: pointer;
+}
+
+figure.product-image-small {
+    margin: 0;
+    flex: 3;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsiv-image-small {
+    height: 100%;
+    width: 100%;
+}
+
+.settings-icon-small-card {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-text-small-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-text h3 {
+    color: #222;
+    font-family: Open Sans;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.small-card-text p {
+    color: #222;
+    font-family: Open Sans;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.readers-fav h3 {
+    color: #222;
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
 }
