@@ -29,6 +29,7 @@ nav.clickableItems {
     gap: 1rem;
 }
 
+
 img.nectarLogo {
     margin-left: 1rem;
     margin: 0.5rem
@@ -238,6 +239,8 @@ aside.product-info button:hover {
     cursor: pointer;
 }
 
+.product-small {}
+
 figure.product-image-small {
     margin: 0;
     flex: 3;
@@ -262,15 +265,17 @@ figure.product-image-small {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 0.3rem;
 }
 
-.info-text h3 {
+.product-info-small h3 {
     color: #222;
     font-family: Open Sans;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    margin-left: 0.3rem;
 }
 
 .small-card-text p {
@@ -280,9 +285,15 @@ figure.product-image-small {
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
+    margin-left: 0.3rem;
 }
 
-.readers-fav h3 {
+.info-text-small-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-card-title {
     color: #222;
     text-align: center;
     font-family: Lato;
@@ -290,4 +301,22 @@ figure.product-image-small {
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+}
+
+
+
+.view-all-btn {
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+}
+
+button.view-all-recipes {
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.recipeCategoriesContainer {
+    display: flex;
+    justify-content: center;
 }
