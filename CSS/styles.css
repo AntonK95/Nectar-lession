@@ -240,8 +240,6 @@ aside.product-info button:hover {
     cursor: pointer;
 }
 
-.product-small {}
-
 figure.product-image-small {
     margin: 0;
     flex: 3;
@@ -280,7 +278,7 @@ figure.product-image-small {
 }
 
 .product-info-small {
-    display: flex;
+    display: grid;
     gap: 0.2rem;
     margin-left: 0.5rem;
 }
@@ -304,7 +302,7 @@ figure.product-image-small {
     color: #222;
     text-align: center;
     font-family: Lato;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -321,15 +319,45 @@ figure.product-image-small {
 button.view-all-recipes {
     padding: 1rem;
     border-radius: 2rem;
+    background-color: #DADEE3;
 }
 
 button.view-all-recipes:hover {
-    background-color: #222;
-    color: whitesmoke;
+    background-color: rgba(255, 227, 80, 1);
+    color: black;
     transition: all 0.3s;
 }
 
 .recipeCategoriesContainer {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-template-areas: "desserts smoothies specialOccations burgers";
+    /* här kopplar vi in det vi har namngett nedan. I denna area är det 3 items per rad, vid varje upprepning av namn (greenItem) tar det namnivna item upp en fraction, item x upprepning = antal fractions */
+}
+
+.recipeCard {
+    min-height: 6rem;
+    min-width: 3rem;
+}
+
+.desserts {
+    grid-area: desserts;
+    /* här namnger vi detta item till greenItem i grid-area */
+}
+
+.smoothies {
+    grid-area: smoothies;
+}
+
+.specialOccations {
+    grid-area: specialOccations;
+}
+
+.burgers {
+    grid-area: burgers;
+}
+
+.round-card-title .round-card-text {
+    text-align: center;
 }
