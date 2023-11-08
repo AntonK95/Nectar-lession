@@ -170,6 +170,7 @@ aside.product-info {
 .rating {
     display: flex;
     gap: 0.2rem;
+    margin-left: 0.5rem;
 }
 
 .product-icons {
@@ -278,6 +279,12 @@ figure.product-image-small {
     margin-left: 0.3rem;
 }
 
+.product-info-small {
+    display: flex;
+    gap: 0.2rem;
+    margin-left: 0.5rem;
+}
+
 .small-card-text p {
     color: #222;
     font-family: Open Sans;
@@ -314,6 +321,12 @@ figure.product-image-small {
 button.view-all-recipes {
     padding: 1rem;
     border-radius: 2rem;
+}
+
+button.view-all-recipes:hover {
+    background-color: #222;
+    color: whitesmoke;
+    transition: all 0.3s;
 }
 
 .recipeCategoriesContainer {
